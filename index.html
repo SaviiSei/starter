@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Aux•Klaré | Virtual Assistant Services</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Montserrat', sans-serif; background-color:#0d0d0d; color:#e0e0e0; line-height:1.6; overflow-x:hidden; }
+    a { color:inherit; text-decoration:none; }
+
+    .container { max-width:1100px; margin:0 auto; padding:2rem; }
+
+    header { text-align:center; padding:4rem 2rem 2rem; }
+    header p.brand { font-size:0.9rem; letter-spacing:2px; color:#aaa; margin-bottom:0.5rem; }
+    header h1 { font-size:3rem; 
+                background: linear-gradient(90deg, #c0c0c0, #ffffff, #c0c0c0);
+                -webkit-background-clip: text; 
+                -webkit-text-fill-color: transparent; 
+                animation: shimmer 3s linear infinite, fadeIn 1.5s ease-in;
+                background-size: 200% 100%; }
+    header p.tagline { font-size:1.2rem; margin-top:1rem; color:#aaa; animation: fadeIn 2s ease-in; }
+
+    .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:3rem 1rem; }
+    .hero h2 { font-size:2rem; margin-bottom:1rem; color:#c0c0c0; animation: slideUp 1.2s ease-out; }
+    .hero p { max-width:700px; margin-bottom:2rem; color:#bbb; animation: fadeIn 1.5s ease-in; }
+    .hero a.button { padding:1rem 2rem; background:linear-gradient(90deg, #c0c0c0, #ffffff); color:#0d0d0d; font-weight:600; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; animation: popUp 1.8s ease-out, pulse 2s infinite; }
+    .hero a.button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(192,192,192,0.3); }
+
+    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; margin:4rem 0; }
+    .service-card { background-color:#1a1a1a; padding:2rem; border-radius:12px; text-align:center; transition: transform 0.3s, box-shadow 0.3s; position:relative; overflow:hidden; }
+    .service-card::before { content:''; position:absolute; width:100%; height:100%; background:rgba(255,255,255,0.03); top:-100%; left:0; transition:top 0.5s ease; }
+    .service-card:hover::before { top:0; }
+    .service-card:hover { transform:translateY(-5px); box-shadow:0 5px 20px rgba(192,192,192,0.3); }
+    .service-card h3 { margin-bottom:1rem; color:#c0c0c0; }
+    .service-card p { color:#aaa; font-size:0.95rem; }
+    .service-card .icon { font-size:2.5rem; margin-bottom:1rem; color:#c0c0c0; }
+
+    .package { background:#1a1a1a; padding:3rem 2rem; border-radius:12px; text-align:center; margin-bottom:4rem; }
+    .package h3 { font-size:2rem; margin-bottom:1rem; color:#c0c0c0; }
+    .package p { font-size:1rem; color:#bbb; margin-bottom:1.5rem; max-width:700px; margin-left:auto; margin-right:auto; }
+    .package ul { list-style:none; padding-left:0; margin-bottom:2rem; }
+    .package ul li { padding:0.5rem 0; font-size:1rem; color:#aaa; position:relative; padding-left:1.5rem; }
+    .package ul li::before { content:'✔'; color:#c0c0c0; margin-right:0.3rem; position:absolute; left:0.2rem; }
+    .package a.button { padding:1rem 2rem; background:linear-gradient(90deg, #c0c0c0, #ffffff); color:#0d0d0d; font-weight:600; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s; animation: popUp 1.8s ease-out, pulse 2s infinite; }
+    .package a.button:hover { transform:scale(1.05); box-shadow:0 5px 20px rgba(192,192,192,0.3); }
+
+    footer { text-align:center; padding:3rem 1rem; border-top:1px solid #333; color:#777; font-size:0.9rem; }
+    footer a { color:#c0c0c0; font-weight:600; }
+
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes slideUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes popUp { 0% {transform:scale(0.8);} 100% {transform:scale(1);} }
+    @keyframes shimmer { 0% {background-position: -200% 0;} 100% {background-position: 200% 0;} }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+    @media(max-width:768px){ header h1{ font-size:2.4rem; } .hero h2{ font-size:1.6rem; } .service-card{ padding:1.5rem; } .package h3{ font-size:1.6rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <p class="brand">SAVII•SEI</p>
+    <h1>Discover Aux•Klaré</h1>
+    <p class="tagline">Where Vision Finds Its Voice | <strong>Connect•Amplify•Impact</strong></p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <h2>Still juggling everything alone?</h2>
+    <p>Most business owners struggle with managing social media, customer support, admin tasks, and planning events while trying to grow. Imagine having a skilled Virtual Assistant to handle it all—so you can focus on what really matters: scaling your business and amplifying your impact.</p>
+    <a href="https://forms.gle/bKSWRAjqg8xofQHK7" class="button" target="_blank">Let's Connect</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services container">
+    <div class="service-card">
+      <div class="icon">📱</div>
+      <h3>Social Media Management (SMM)</h3>
+      <p>Amplify your online presence with engaging content that drives traffic, leads, and visibility for your brand.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">💬</div>
+      <h3>Customer Support</h3>
+      <p>Turn interactions into memorable experiences with timely, professional, and empathetic support that builds loyalty.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🗂️</div>
+      <h3>Administrative Support</h3>
+      <p>Save time and reduce stress by letting a VA handle emails, scheduling, data entry, and day-to-day operations efficiently.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🎉</div>
+      <h3>Event Planning</h3>
+      <p>From concept to execution, get seamless event planning services that make workshops, launches, and webinars truly impactful.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🚀</div>
+      <h3>Lead Generation</h3>
+      <p>We help you attract, qualify, and convert high-quality leads so your business grows faster without wasting time chasing prospects.</p>
+    </div>
+  </section>
+
+  <!-- STARTER PACKAGE -->
+  <section class="package container">
+    <h3>Starter Package: “Focus & Amplify”</h3>
+    <p>Ever feel like you're doing everything—and still not growing? This package is designed to free up your time, drive lead growth, and give you a polished, consistent brand presence.</p>
+    <button id="toggleStarter" class="toggle-btn">View Full Details</button>
+    <div id="detailsStarter" class="details" style="display:none; text-align:left; background:#151515; padding:1.5rem; border-radius:10px; margin-bottom:1.5rem;">
+      <h4 style="color:#c0c0c0; margin-bottom:1rem;">INCLUSIONS</h4>
+      <ul>
+        <li>Social media scheduling & content creation (1–2 posts/week via Canva/Buffer)</li>
+        <li>Customer support: handle emails/messages (~10–15/week)</li>
+        <li>Admin & data management: critical tasks & scheduling</li>
+        <li>Event coordination: small webinars/launches, minimal logistics</li>
+        <li>Lead generation: 20–30 leads/month + outreach</li>
+      </ul>
+      <p><strong>Hours:</strong> ~25 hours/month (~1–2 hours/day)</p>
+      <p><strong>Tools:</strong> Canva, Buffer, Gmail/CRM, Zoom</p>
+      <p><strong>Impact Outcome:</strong> Reclaim your time, consistently generate high-quality leads, and scale without burnout.</p>
+      <p style="margin-top:1rem; color:#bbb; font-size:0.95rem;">
+        💡 <em>Special Introductory Rate:</em> <strong>US$800 / month</strong> for up to 25 hours.<br>
+        Save up to $1,400 vs. hiring each service separately. Less stress, less coordination hassle, all services bundled.
+      </p>
+    </div>
+    <a href="https://forms.gle/35BqtP7FAEspAoq56" class="button" target="_blank">Grab This Starter Package</a>
+  </section>
+
+  <!-- STARTER + EXTRA HOURS PACKAGE -->
+  <section class="package container">
+    <h3>Starter + Extra Hours: “Momentum Builder”</h3>
+    <p>For founders who need more time without burning out. This plan adds extra hours to scale faster while keeping tasks seamless and consistent.</p>
+    <button id="toggleExtra" class="toggle-btn">View Full Details</button>
+    <div id="detailsExtra" class="details" style="display:none; text-align:left; background:#151515; padding:1.5rem; border-radius:10px; margin-bottom:1.5rem;">
+      <h4 style="color:#c0c0c0; margin-bottom:1rem;">INCLUSIONS</h4>
+      <ul>
+        <li>All Starter Package services</li>
+        <li>Extra 10 hours/month for advanced tasks or overflow work</li>
+        <li>Advanced lead nurturing & CRM updates</li>
+        <li>Extended social media content creation (3–4 posts/week)</li>
+        <li>Proactive admin support: reports, workflow optimization</li>
+      </ul>
+      <p><strong>Hours:</strong> ~35 hours/month (~1.5–2 hours/day)</p>
+      <p><strong>Tools:</strong> Canva, Buffer, Gmail/CRM, Zoom, Trello/Asana</p>
+      <p><strong>Impact Outcome:</strong> Reclaim more time, reduce stress, accelerate lead generation, streamline operations, and maintain brand consistency.</p>
+      <p style="margin-top:1rem; color:#bbb; font-size:0.95rem;">
+        💡 <em>Monthly Investment:</em> <strong>US$1,100 / month</strong> for 35 hours.<br>
+        Compared to hiring individually, save up to $2,000+ monthly. Extra hours allow urgent tasks to be handled without stress.
+      </p>
+    </div>
+    <a href="https://forms.gle/35BqtP7FAEspAoq56" class="button" target="_blank">Upgrade to Momentum Builder</a>
+  </section>
+
+  <!-- PREMIUM PACKAGE -->
+  <section class="package container">
+    <h3>Premium Package: “Scale & Elevate”</h3>
+    <p>The ultimate package for businesses ready to grow strategically. Includes all services plus exclusive growth-focused tasks to maximize ROI.</p>
+    <button id="togglePremium" class="toggle-btn">View Full Details</button>
+    <div id="detailsPremium" class="details" style="display:none; text-align:left; background:#151515; padding:1.5rem; border-radius:10px; margin-bottom:1.5rem;">
+      <h4 style="color:#c0c0c0; margin-bottom:1rem;">INCLUSIONS</h4>
+      <ul>
+        <li>All Starter + Extra Hours services</li>
+        <li>Dedicated project management & strategy sessions</li>
+        <li>Advanced analytics & social media growth hacks</li>
+        <li>Event planning: webinars, launches, workshops with full logistics</li>
+        <li>Lead generation: 50+ qualified leads/month with personalized outreach</li>
+        <li>Competitor & market insights reports</li>
+        <li>Brand optimization suggestions & content calendar strategy</li>
+      </ul>
+      <p><strong>Hours:</strong> 50 hours/month (~2–3 hours/day)</p>
+      <p><strong>Tools:</strong> Canva, Buffer, Gmail/CRM, Zoom, Trello/Asana, HubSpot</p>
+      <p><strong>Impact Outcome:</strong> Focus on growth without stress, consistently generate leads, execute high-impact campaigns, optimize brand presence, and minimize outsourcing costs.</p>
+      <p style="margin-top:1rem; color:#bbb; font-size:0.95rem;">
+        💡 <em>Monthly Investment:</em> <strong>US$1,800 / month</strong> for 50 hours.<br>
+        Save thousands compared to multiple freelancers. Stress-free management of operations, marketing, and lead generation.
+      </p>
+    </div>
+    <a href="https://forms.gle/35BqtP7FAEspAoq56" class="button" target="_blank">Reserve Premium Package</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Ready to elevate your business? <a href="https://forms.gle/bKSWRAjqg8xofQHK7" target="_blank">Book Your VA Today</a></p>
+    <p>&copy; 2025 Savii•Sei | Where Vision Finds Its Voice | Connect•Amplify•Impact</p>
+  </footer>
+
+  <!-- Toggle Scripts -->
+  <script>
+    function toggleSection(buttonId, detailsId){
+      document.getElementById(buttonId).addEventListener("click", function(){
+        let d = document.getElementById(detailsId);
+        if(d.style.display === "none"){ d.style.display="block"; this.textContent="Hide Details"; }
+        else{ d.style.display="none"; this.textContent="View Full Details"; }
+      });
+    }
+
+    toggleSection("toggleStarter", "detailsStarter");
+    toggleSection("toggleExtra", "detailsExtra");
+    toggleSection("togglePremium", "detailsPremium");
+  </script>
+
+</body>
+</html>
